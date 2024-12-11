@@ -12,9 +12,13 @@ dotenv.config();
 const app = express();
 
 
+const cors = require("cors");
+
 app.use(
   cors({
-    origin: "https://menu-app-frontend-psi.vercel.app/", 
+    origin: "https://menu-app-frontend-psi.vercel.app",  
+    methods: "GET,POST,PUT,DELETE",  
+    allowedHeaders: "Content-Type,Authorization",
   })
 );
 
